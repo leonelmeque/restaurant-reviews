@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,
+td,
+th,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  position: relative;
+}
+
+ul,
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+}
+
+/* Links */
+a {
+  color: #ff4242;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #3397db;
+  text-decoration: none;
+}
+
+a img {
+  border: none 0px #fff;
+}
+
+/* Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 20px;
+}
+/* Semantic Elements */
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/*===================== Home Page Styling ===================== */
+header {
+  height: 100px;
+  width: 100%;
+}
+
+header a {
+  color: #f2f2f2;
+  font-size: 50px;
+}
+
+footer {
+  font-size: 8pt;
+  letter-spacing: 1px;
+  padding: 25px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header,
+footer {
+  background-color: #40261c;
+  color: #f2f2f2;
+}
+
+/* Map */
+#map {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+#map-container {
+  background: blue none repeat scroll 0 0;
+  height: 400px;
+  width: 100%;
+}
