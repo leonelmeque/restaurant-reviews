@@ -190,3 +190,45 @@ footer {
   padding: 0 10px;
   width: 200px;
 }
+
+/* ======================== Restaurant Details ================== */
+#maincontent-details{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+#maincontent-details #restaurant-container{
+  grid-column: span 12;
+  background-color: #04bf9d;
+  border: 2px solid #ccc;
+  margin: 15px;
+  min-height: 380px;
+  color: white;
+  /* text-align: left; */
+  
+}
+
+#maincontent-details #reviews-container{
+  grid-column: span 12;
+}
+
+#maincontent-details #map-container{
+  grid-column: span 12;
+}
+
+#restaurant-hours  tr td {
+  color: rgb(255, 255, 255);
+  font-size: 25pt;
+}
+
+#restaurant-img{
+  width: 100%;
+}
+
+/* Restaurant Container */
+/* #restaurant-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  
+} */
