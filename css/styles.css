@@ -6,7 +6,7 @@ td,
 th,
 p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #333;
   line-height: 1.5;
 }
@@ -72,12 +72,12 @@ header {
   height: 100px;
   width: 100%;
   display: flex;
-  justify-content:center;
-  align-content:center;
+  justify-content: center;
+  align-content: center;
 }
 
-header h1{
-  text-align:center;
+header h1 {
+  text-align: center;
 }
 
 header a {
@@ -119,10 +119,10 @@ footer {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows:minmax(100px,auto);
-  grid-gap:3em;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 3em;
 }
 
 #restaurants-list li {
@@ -134,7 +134,7 @@ footer {
   color: white;
   text-align: left;
   grid-column: span 12;
-  display:flex;
+  display: flex;
   /* flex-wrap: wrap; */
   flex-direction: column;
 }
@@ -158,13 +158,13 @@ footer {
   margin: 20px 30px 0px 30px; */
   text-transform: uppercase;
   margin: 20px 30px 0px;
-  flex:1;
+  flex: 1;
 }
 #restaurants-list p {
   color: white;
   margin: 0 30px;
   font-size: 1.8em;
-  flex:1;
+  flex: 1;
 }
 
 #restaurants-list li a {
@@ -178,10 +178,10 @@ footer {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  flex:1;
+  flex: 1;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   #restaurants-list li {
     grid-column: span 4;
   }
@@ -229,7 +229,7 @@ footer {
   border: 2px solid #ccc;
   margin: 15px;
   min-height: 380px;
-  
+
   /* text-align: left; */
 }
 
@@ -244,10 +244,10 @@ footer {
   color: white;
 }
 
-#restaurant-container h1{
+#restaurant-container h1 {
   font-size: 48pt;
 }
-#restaurant-container h2{
+#restaurant-container h2 {
   font-size: 28pt;
 }
 
@@ -271,23 +271,60 @@ footer {
   
 } */
 /* Desktop Layout Changes */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   #maincontent-details #reviews-container {
     grid-column: span 6;
-    grid-row:3/5;
-    
+    grid-row: 3/5;
   }
   #maincontent-details #map-container {
     margin-top: 15px;
     grid-column: 7/13;
     /* grid-row:3/5; */
-    grid-row:1/3;
+    grid-row: 2/3;
   }
   #maincontent-details #restaurant-container {
-    grid-column: span 6;
-    grid-row: 1/5;
+    grid-column: span 12;
+    grid-row: 1;
     min-height: 180px;
+    display: grid;
+    padding-bottom: 100px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(50px,auto);
+    grid-column-gap: 50px;
   }
+
+  #restaurant-container :nth-child(1){
+      grid-column: span 3;
+      grid-row: 1/6;
+  }
+
+  #restaurant-container :nth-child(n+2){
+    grid-column: span 3;
+  }
+  #restaurant-container :nth-child(7){
+      align-self: center;
+  }
+
+  #restaurant-container :nth-child(8){
+    align-self: center;
+}
+  #restaurant-container :nth-child(n+7){
+    grid-column: span 3;
+    text-align:center;
+    /* padding: 0px 300px; */
+  }
+
+
+ #restaurant-container :nth-child(n){margin:0px !important;}
+ /* #restaurant-container::before,
+ #restaurant-container::after{
+   flex-basis: 100%;
+   width:0;
+   order:2;
+ } */
+  /* #restaurant-container #restaurant-img{
+      flex:1;
+  } */
 }
 
 /* ====================== Navigation ====================== */
@@ -308,35 +345,34 @@ nav h1 a {
   text-transform: uppercase;
 } */
 #breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    
-   
-    /* width: calc(50% - 80px); */
+  padding: 10px 40px 16px;
+  list-style: none;
+  background-color: #eee;
+
+  /* width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
-    font-size: 2.5em;
+  display: inline;
+  font-size: 2.5em;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+#breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
