@@ -241,6 +241,13 @@ footer {
   align-content: center;
 }
 
+@media screen and (max-width:1023px){
+  #restaurants-list {
+    overflow:scroll;
+    height: 1000px;
+  }
+}
+
 #restaurants-list li a {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -258,7 +265,7 @@ footer {
 #restaurants-list p {
   color: white;
   margin: 0 30px;
-  font-size: 1em;
+  font-size: 0.7em;
   z-index: 1;
   width: 100%;
 }
@@ -456,7 +463,7 @@ footer {
 /* Paragraph color */
 #reviews-list p {
   color: white;
-  font-size: 0.7em;
+  font-size: 0.3em;
 }
 /* more changes to other paragraphs */
 #reviews-list p:nth-child(3) {
