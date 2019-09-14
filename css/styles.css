@@ -211,3 +211,142 @@ footer {
   height: 100%;
   z-index:-1;
 }
+
+/* ------------------------ Restaurant Details Styling ------------------------*/
+/* Breadcrumb */
+#breadcrumb {
+  padding: 10px 40px 16px;
+  list-style: none;
+  background-color: #eee;
+  margin:0 0 50px 0;
+ 
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+  display: inline;
+  font-size: 1.5em;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* Main content */
+#maincontent-details {
+  display:flex;
+  flex-flow:wrap;
+  justify-content:center;
+  /* rgba(242, 68, 5,0.8) */
+}
+/* Restaurant details container */
+#restaurant-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ccc;
+  min-height: 380px;
+  margin: 0px 20px;
+  width: 100%;
+  position:relative;
+}
+#restaurant-container h1{
+  position:absolute;
+  top:0;
+  color:white;
+  font-size:3em;
+  width:100%;
+  text-align:center;
+  margin-top: 30%;
+}
+/* Card Image */
+#restaurant-container img:nth-child(1){
+  width:100%;
+  background-size: cover;
+  opacity: 0.2;
+}
+.img-overlay{
+  background-color:#4A5D79;
+  width:100%;
+}
+/* Setting padding to text elements */
+#restaurant-container :nth-child(n+3){
+  padding: 0 20px;
+}
+/* Different color to h2 elements */
+#restaurant-container h2:nth-of-type(n){
+  color: rgb(242, 92, 5);
+  font-size: 2.5em;
+}
+/* Removing margins from paragraphs */
+#restaurant-container p{
+  margin:0;
+  font-size:2.5em;
+}
+
+#restaurant-hours tr td{
+  font-size:1.5em;
+}
+/* Reviews Section */
+
+/* Reviews container */
+#reviews-container{
+  margin: 50px 20px;
+}
+/* header font size */
+#reviews-container h2{
+  font-size: 3em;
+}
+
+#reviews-list {
+  margin: 0;
+  padding: 0;
+}
+/* list items for reviews */
+#reviews-list li {
+  background-color: rgb(74, 93, 121);
+  border: 10px solid #f3f3f3;
+  display: block;
+  list-style-type: none;
+  margin: 0 0 80px 0;
+  padding: 0 50px 20px;
+  position: relative;
+  border-radius: 0 100px 0 100px;
+}
+/* Paragraph color */
+#reviews-list p{
+  color:white;
+  font-size:1em;
+}
+/* more changes to other paragraphs */
+#reviews-list p:nth-child(3){
+  color:#B2D9A7;
+  padding-bottom: 50px;
+  border-bottom: 5px solid #fff;
+}
+
+/* Map in Restaurant Details container */
+
+#maincontent-details #map-container h2 {
+  font-size: 3em;
+}
+
+#maincontent-details  #map-container{
+  margin: 0px 20px;
+}
+
+#maincontent-details #map-container #map{
+  height:80%;
+}
