@@ -246,6 +246,9 @@ footer {
     overflow:scroll;
     height: 1000px;
   }
+  #restaurants-list::-webkit-scrollbar{
+    display:none;
+  }
 }
 
 #restaurants-list li a {
