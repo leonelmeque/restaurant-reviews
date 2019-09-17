@@ -15,7 +15,15 @@ document.addEventListener("DOMContentLoaded", event => {
   serviceWorker();
 });
 
+images = () => {
+  var images = document.getElementsByTagName('img');
+  var urls = [];
+  for(let image of images){
+    urls.push(image.src);
+  }
 
+  return urls;
+}
 /**
  * Service worker
  */
