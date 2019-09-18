@@ -9,21 +9,13 @@ var mapKey =
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener("DOMContentLoaded", event => {
+  
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
   serviceWorker();
 });
 
-images = () => {
-  var images = document.getElementsByTagName('img');
-  var urls = [];
-  for(let image of images){
-    urls.push(image.src);
-  }
-
-  return urls;
-}
 /**
  * Service worker
  */
@@ -120,8 +112,11 @@ initMap = () => {
     }
   ).addTo(newMap);
 
-  updateRestaurants();
-};
+  
+    updateRestaurants();
+
+ 
+}
 /* window.initMap = () => {
   let loc = {
     lat: 40.722216,
@@ -141,26 +136,32 @@ initMap = () => {
 updateRestaurants = () => {
   const cSelect = document.getElementById("cuisines-select");
   const nSelect = document.getElementById("neighborhoods-select");
-
-  const cIndex = cSelect.selectedIndex;
-  const nIndex = nSelect.selectedIndex;
-
+  
+  var cIndex = cSelect.selectedIndex;
+  var nIndex = nSelect.selectedIndex;
+  
   const cuisine = cSelect[cIndex].value;
   const neighborhood = nSelect[nIndex].value;
-
-  DBHelper.fetchRestaurantByCuisineAndNeighborhood(
-    cuisine,
-    neighborhood,
-    (error, restaurants) => {
-      if (error) {
-        // Got an error!
-        console.error(error);
-      } else {
-        resetRestaurants(restaurants);
-        fillRestaurantsHTML();
+  
+ 
+    DBHelper.fetchRestaurantByCuisineAndNeighborhood(
+      cuisine,
+      neighborhood,
+      (error, restaurants) => {
+        if (error) {
+          // Got an error!
+          console.error(error);
+        } else {
+          
+          resetRestaurants(restaurants);
+          fillRestaurantsHTML();
+        }
       }
-    }
-  );
+    
+  )
+   
+    
+  
 };
 
 /**
@@ -178,6 +179,7 @@ resetRestaurants = restaurants => {
   }
   self.markers = [];
   self.restaurants = restaurants;
+ 
 };
 
 /**
@@ -200,10 +202,10 @@ createRestaurantHTML = restaurant => {
   const image = document.createElement("img");
   image.className = "restaurant-img";
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = restaurant.name;
+  image.alt = `Image of restaurant ${restaurant.name}`;
   li.append(image);
 
-  const name = document.createElement("h1");
+  const name = document.createElement("h2");
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -219,6 +221,8 @@ createRestaurantHTML = restaurant => {
   more.innerHTML = "View Details";
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more);
+
+  li.tabIndex = "3";
 
   return li;
 };

@@ -19,9 +19,9 @@
 // ];
 const cacheFiles = []
 const staticCache = "res-reviews-v1";
-
+// installing the service worker
 self.addEventListener("install", e => {
-  
+   console.log(e);
 });
 
 // SOURCE: https://www.youtube.com/watch?v=ksXwaWHCW6k
