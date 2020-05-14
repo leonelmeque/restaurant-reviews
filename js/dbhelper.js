@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/db.json`;
+    return `https://api.jsonbin.io/b/5ebcc648a47fdd6af162f559`;
   }
 
   /**
